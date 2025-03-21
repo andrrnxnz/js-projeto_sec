@@ -27,7 +27,7 @@ function gerarNumeroAleatorio() {
     return parseInt(Math.random() * 100) + 1;
 }
 
-let numeroSecreto = gerarNumeroAleatorio();
+let numeroAleatorio = gerarNumeroAleatorio();
 console.log(numeroSecreto);
 
 function verificarChute() {
