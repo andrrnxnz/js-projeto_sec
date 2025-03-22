@@ -38,7 +38,7 @@ function verificarChute() {
         }
         tentativas--;
     } else {
-        exibirTextoNaTela('h1', 'Errou!')
+        exibirTextoNaTela('h1', `Errou! O Número Secreto era ${numeroSecreto}`)
         exibirTextoNaTela('P', `Você não possui mais Tentativas.`)
     }
 }
