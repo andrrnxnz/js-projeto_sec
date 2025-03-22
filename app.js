@@ -24,16 +24,17 @@ function verificarChute() {
     console.log(tentativas)
     let chute = parseInt(document.querySelector('input').value);
     console.log(chute === numeroSecreto);
+    let palavraTentativa = tentativas === 1 ? 'Tentativa' : 'Tentativas';
     if (tentativas > 0) {
         if (chute === numeroSecreto) {
             exibirTextoNaTela('h1', 'Parabéns! Você Acertou!');
             exibirTextoNaTela('p', `O Número Secreto é ${numeroSecreto}.`);
         } else if (chute > numeroSecreto) {
             exibirTextoNaTela('h1', 'Errou! O Número Secreto é Menor.');
-            exibirTextoNaTela('p', `Você possui ${tentativas} Tentativas!`);
+            exibirTextoNaTela('p', `Você possui ${tentativas} ${palavraTentativa}!`);
         } else {
             exibirTextoNaTela('h1', 'Errou! O Número Secreto é Maior.');
-            exibirTextoNaTela('p', `Você possui ${tentativas} Tentativas!`);
+            exibirTextoNaTela('p', `Você possui ${tentativas} ${palavraTentativa}!`);
         }
         tentativas--;
     } else {
